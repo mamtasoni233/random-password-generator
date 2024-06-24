@@ -68,3 +68,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## add tailwind css in react app
+
+1.  npm install -D tailwindcss
+2.  npx tailwindcss init
+3.  add configuration in config file
+    -- /** @type {import('tailwindcss').Config} \*/
+    module.exports = {
+    content: [
+    "./src/**/\*.{js,jsx,ts,tsx}",
+    ],
+    theme: {
+    extend: {},
+    },
+    plugins: [],
+    }
+4.  add tailwind directory in indexedDB.css file
+    -- @tailwind base;
+    -- @tailwind components;
+    -- @tailwind utilities;
+
+## add font awsome in react app
+
+1. npm i --save @fortawesome/fontawesome-svg-core
+
+2. npm i --save @fortawesome/free-solid-svg-icons
+3. npm i --save @fortawesome/free-regular-svg-icons
+4. npm i --save @fortawesome/free-brands-svg-icons
+
+5. npm i --save @fortawesome/react-fontawesome@latest
+
+## react notification component
+
+-- npm i react-notifications
+
+## react heroicons
+
+-- npm i @heroicons/react
+
+## react router
+
+--- https://reactrouter.com/en/main
+
+## react tostify
+
+-- npm i react-toastify
