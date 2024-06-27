@@ -18,8 +18,8 @@ function App() {
   let [fpass, setFpass] = useState('');
 
   let createPassword = (e) => {
-    let charSet = '';
     let finalPass = '';
+    let charSet = '';
     e.preventDefault();
     if (upperCase || lowerCase || number || symbols) {
       if (upperCase) charSet += upperCasedAlphabets;
@@ -35,9 +35,16 @@ function App() {
       // alert('Please select at least one checkbox value...!');
     }
   };
-  let copyPass = () => {
-    navigator.clipboard.writeText(fpass);
-    toast.success('Password Copied');
+  let copyPass = async () => {
+    if (fpass.length > 0) {
+      console.log(fpass);
+      setTimeout(() => {
+        navigator.clipboard.writeText(fpass);
+      }, 500);
+      toast.success('Password copied to clipboard...!');
+    } else {
+      toast.error('Please generate password first...!');
+    }
   };
   return (
     <>
